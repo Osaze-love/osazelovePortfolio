@@ -5,8 +5,8 @@ import Title from "./Title";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[60vh] overflow-hidden flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row items-center justify-between animate-move-up">
-      <div className="space-y-10 text-center lg:text-left">
+    <div className="min-h-[60vh] overflow-hidden flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row items-center justify-between animate-move-up ">
+      <div className="space-y-10 text-white text-center lg:text-left">
         <h1 className="text-4xl lg:text-6xl font-bold">
           Nice to meet you 👋
           <br />{" "}
@@ -18,12 +18,6 @@ const HeroSection = () => {
           I'm a Frontend web developer passionate about building modern
           interactive web applications that meet user and company needs.
         </p>
-        <Link
-          className="inline-block group"
-          href={"mailto:loveomobude23@gmail.com"}
-        >
-          <Title text="Contact Me " />
-        </Link>
       </div>
       <div className="relative">
         <div className="w-80 h-80 space-y-3 -rotate-[30deg] relative">
@@ -39,7 +33,9 @@ const HeroSection = () => {
         </div>
         <div className="absolute bottom-5 left-0">
           <MovingBorderBtn borderRadius="0.5rem" className="p-3 font-semibold">
-            <a href="/osazelovecv.pdf">📢 View CV</a>
+            <a href="/Osaze-OmobudeLovecv.pdf" target="_blank">
+              📢 View CV
+            </a>
           </MovingBorderBtn>
         </div>
       </div>

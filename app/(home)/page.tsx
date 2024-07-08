@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import ProfessionalSummary from "./components/ProfessionalSummary";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
@@ -14,6 +15,7 @@ const page = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto p-5 mt-20">
+        <ProfessionalSummary />
         <Skills />
         <Projects />
         <Footer />

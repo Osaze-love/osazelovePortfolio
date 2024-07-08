@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 
 const Navbar = ({ className }: { className?: string }) => {
   const socials = [
@@ -14,6 +14,11 @@ const Navbar = ({ className }: { className?: string }) => {
       label: "Github",
       icon: SiGithub,
     },
+    {
+      link: "mailto:loveomobude23@gmail.com",
+      label: "Gmail",
+      icon: SiGmail,
+    },
   ];
   return (
     <nav
@@ -22,14 +27,19 @@ const Navbar = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-green-500 -rotate-2">
+      <h1 className="text-2xl text-white font-bold underline underline-offset-8 decoration-green-500 -rotate-2">
         OsazeLove
       </h1>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5 text-white">
         {socials.map((social, index) => {
           const Icon = social.icon;
           return (
-            <Link href={social.link} key={index} aria-label={social.label}>
+            <Link
+              href={social.link}
+              key={index}
+              aria-label={social.label}
+              target="_blank"
+            >
               <Icon className="w-5 h-5 hover:scale-125 transition-all" />
             </Link>
           );
