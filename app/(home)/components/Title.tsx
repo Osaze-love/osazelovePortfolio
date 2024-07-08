@@ -1,7 +1,7 @@
 const Title = ({ text, className }: { text: string; className?: string }) => {
   return (
     <div className={className}>
-      <h1 className="text-2xl font-bold group-hover:text-green-500 transition-all">
+      <h1 className="text-2xl font-bold group-hover:text-green-500 text-center transition-all">
         {text}
       </h1>
       <div className="w-40 h-2 bg-green-500 rounded-full"></div>
