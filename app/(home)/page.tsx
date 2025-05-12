@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import ProfessionalSummary from "./components/ProfessionalSummary";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       </div>
       <div className="max-w-7xl mx-auto p-5 mt-20">
         <ProfessionalSummary />
+        <Experience />
         <Skills />
         <Projects />
         <Footer />

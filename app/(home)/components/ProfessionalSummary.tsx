@@ -8,13 +8,7 @@ const ProfessionalSummary = () => {
         className="flex flex-col items-center justify-center rotate-0 "
       />
       <p className="pt-10 text-md md:text-lg">
-        Web Developer with a strong foundation in Next.js, React, TypeScript,
-        and JavaScript. Proven ability to learn and adapt quickly, demonstrated
-        through personal projects, internships,startup roles and coursework.
-        Possess good design implementation awareness and a keen eye for detail.
-        Eager to contribute technical skills and a passion for coding to a
-        dynamic development team, while continuing to grow and refine my
-        abilities in a professional setting.
+      Web developer with over two years of professional experience overtime and five years of being in the web development space spanning years at the university and now being a computer science graduate. Over the years, I have picked up a lot of experience teaching web development and working with startups building end user applications in collaborative development environments.
       </p>
     </div>
   );

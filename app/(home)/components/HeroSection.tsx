@@ -33,7 +33,7 @@ const HeroSection = () => {
         </div>
         <div className="absolute bottom-5 left-0">
           <MovingBorderBtn borderRadius="0.5rem" className="p-3 font-semibold">
-            <a href="/Osaze-OmobudeLovecv.pdf" target="_blank">
+            <a href="/CV_osazelove-1.pdf" target="_blank">
               📢 View CV
             </a>
           </MovingBorderBtn>
