@@ -47,12 +47,12 @@ const otherProjects = [
 
 const Projects = () => {
   return (
-    <div className="py-10 text-white p-5 sm:p-0">
+    <div className="py-10 text-white px-1 md:px-0 p-5 sm:p-0">
       <Title
         text="Projects 🎨"
         className="flex flex-col items-center justify-center "
       />
-      <div className="max-w-3xl mx-auto text-center text-gray-300 pt-6 pb-10 text-md md:text-lg">
+      <div className="max-w-full md:max-w-3xl mx-auto text-center text-gray-300 pt-6 pb-4 md:pb-10 text-sm md:text-md md:text-lg">
         This is not an exhaustive list of projects. For confidentiality, some live projects are not included. See full descriptions in <span>
         <MovingBorderBtn borderRadius="0.2rem" className="p-1 font-semibold">
             <a href="/CV_osazelove-1.pdf" target="_blank">
@@ -62,7 +62,7 @@ const Projects = () => {
         </span>
          
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 pt-10 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pt-4 md:pt-10 gap-5">
         {mainProjects.map((project, index) => (
           <div key={index}>
             <div className={cn("p-5 rounded-md", project.background)}>
@@ -72,14 +72,14 @@ const Projects = () => {
               >
                 <h1>{project.title}</h1>
               </DirectionAwareHover>
-              <p className="my-3">{project.description}</p>
+              <p className="my-3 text-sm md:text-lg">{project.description}</p>
               {project.link && project.link !== "#" && (
                 <div className="flex justify-center items-center mt-2">
                   <MovingBorderBtn
                     borderRadius="0.5rem"
-                    className="p-3 font-semibold"
+                    className="px-2 md:px-3 py-1 md:py-2 font-semibold"
                   >
-                    <a href={project.link} target="_blank">
+                    <a className="text-sm md:text-lg" href={project.link} target="_blank">
                       Project Link
                     </a>
                   </MovingBorderBtn>
@@ -89,12 +89,12 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <div className="pt-40">
+      <div className="pt-20 md:pt-40">
         <Title
           text="Other Projects"
           className="flex flex-col items-center justify-center rotate-0"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 pt-10 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 pt-2 md:pt-10 gap-5">
           {otherProjects.map((project, index) => (
             <div key={index}>
               <div className={cn("p-5 rounded-md", project.background)}>
@@ -104,23 +104,23 @@ const Projects = () => {
                 >
                   <h1>{project.title}</h1>
                 </DirectionAwareHover>
-                <p className="my-3">{project.description}</p>
+                <p className="my-3 text-sm md:text-lg">{project.description}</p>
                 <div className="flex justify-evenly items-center">
                   {project.github && (
                     <MovingBorderBtn
                       borderRadius="0.5rem"
-                      className="p-3 font-semibold"
+                      className="px-2 md:px-3 py-1 md:py-2 font-semibold"
                     >
-                      <a href={project.github} target="_blank">
+                      <a className="text-sm md:text-lg" href={project.github} target="_blank">
                         View Github
                       </a>
                     </MovingBorderBtn>
                   )}
                   <MovingBorderBtn
                     borderRadius="0.5rem"
-                    className="p-3 font-semibold"
+                    className="px-2 md:px-3 py-1 md:py-2 font-semibold"
                   >
-                    <a href={project.link} target="_blank">
+                    <a className="text-sm md:text-lg" href={project.link} target="_blank">
                       Project Link
                     </a>
                   </MovingBorderBtn>

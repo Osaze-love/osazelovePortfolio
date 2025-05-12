@@ -64,17 +64,17 @@ const Experience = () => {
         text="Experience 🧑‍💻"
         className="flex flex-col items-center justify-center rotate-0 "
       />
-      <div className="pt-10 space-y-10">
+      <div className="pt-4 md:pt-10 space-y-10">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="bg-black-500 p-6 rounded-lg shadow-md">
+          <div key={idx} className="bg-black-500 p-2 md:p-6 rounded-lg shadow-md">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              <div className="text-lg font-semibold text-green-400">{exp.role}</div>
-              <div className="text-sm text-gray-400">{exp.date}</div>
-            </div>
-            <div className="text-md font-medium text-indigo-300 mt-1">{exp.company}</div>
+              <div className="text-sm md:text-lg font-semibold text-green-400">{exp.role}</div>
+              <div className="text-sm md:text-md text-gray-400">{exp.date}</div>
+            </div> 
+            <div className="text-sm md:text-ms font-medium text-indigo-300 mt-1">{exp.company}</div>
             <ul className="list-disc pl-5 mt-2 text-gray-300 space-y-1">
               {exp.details.map((detail, i) => (
-                <li key={i}>{detail}</li>
+                <li className="text-sm md:text-lg" key={i}>{detail}</li>
               ))}
             </ul>
           </div>

@@ -42,7 +42,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="max-w-5xl text-white mx-auto px-8">
+    <div className="max-w-5xl text-white mx-auto px-1 md:px-8">
       <Title
         text="Skills 🛠️"
         className="flex flex-col items-center justify-center "

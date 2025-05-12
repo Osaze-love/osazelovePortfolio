@@ -7,14 +7,14 @@ const HeroSection = () => {
   return (
     <div className="min-h-[60vh] overflow-hidden flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row items-center justify-between animate-move-up ">
       <div className="space-y-10 text-white text-center lg:text-left">
-        <h1 className="text-4xl lg:text-6xl font-bold">
+        <h1 className="text-lg md:text-4xl lg:text-6xl font-bold">
           Nice to meet you 👋
           <br />{" "}
           <span className="underline underline-offset-8 decoration-green-500">
             I'm Osaze Love.
           </span>
         </h1>
-        <p className="md:w-96 text-lg text-gray-300">
+        <p className="md:w-96 text-sm md:text-lg text-gray-300">
           I'm a Frontend web developer passionate about building modern
           interactive web applications that meet user and company needs.
         </p>
@@ -32,7 +32,7 @@ const HeroSection = () => {
           <div className="glow absolute top-[40%] right-1/2 -z-10"></div>
         </div>
         <div className="absolute bottom-5 left-0">
-          <MovingBorderBtn borderRadius="0.5rem" className="p-3 font-semibold">
+          <MovingBorderBtn borderRadius="0.5rem" className="p-1 md:p-3 font-semibold">
             <a href="/CV_osazelove-1.pdf" target="_blank">
               📢 View CV
             </a>
