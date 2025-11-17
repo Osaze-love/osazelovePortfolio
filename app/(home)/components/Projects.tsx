@@ -15,7 +15,7 @@ const mainProjects = [
   },
   {
     title: "Passpro Africa",
-    link: "https://passpro.africa/",
+    link: "https://passprowebsite.vercel.app/",
     cover: "/passproImage.png",
     description:
       "Nextjs. Event Ticketing platform. Built solely.",
@@ -55,7 +55,7 @@ const Projects = () => {
       <div className="max-w-full md:max-w-3xl mx-auto text-center text-gray-300 pt-6 pb-4 md:pb-10 text-sm md:text-md md:text-lg">
         This is not an exhaustive list of projects. For confidentiality, some live projects are not included. See full descriptions in <span>
         <MovingBorderBtn borderRadius="0.2rem" className="p-1 font-semibold">
-            <a href="/CV_osazelove-1.pdf" target="_blank">
+            <a href="/OsazeLoveglobalcv.pdf" target="_blank">
              CV
             </a>
           </MovingBorderBtn>
