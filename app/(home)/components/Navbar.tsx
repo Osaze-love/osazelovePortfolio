@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+];
+
 const Navbar = ({ className }: { className?: string }) => {
   const socials = [
     {
@@ -20,16 +27,34 @@ const Navbar = ({ className }: { className?: string }) => {
       icon: SiGmail,
     },
   ];
+
   return (
     <nav
       className={cn(
-        "py-10 flex justify-between items-center animate-move-down",
+        "py-6 md:py-10 flex flex-col sm:flex-row justify-between items-center gap-5 animate-move-down",
         className
       )}
     >
-      <h1 className="text-2xl text-white font-bold underline underline-offset-8 decoration-green-500 -rotate-2">
-        OsazeLove
-      </h1>
+      <Link
+        href="#home"
+        className="text-xl md:text-2xl text-white font-display font-bold hover:text-green-400 transition-colors tracking-tight"
+      >
+        Osaze<span className="text-green-500">Love</span>
+      </Link>
+
+      <div className="hidden md:flex items-center gap-6">
+        {navLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="text-sm text-gray-400 hover:text-white transition-colors relative group"
+          >
+            {link.label}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-green-500 group-hover:w-full transition-all duration-300" />
+          </a>
+        ))}
+      </div>
+
       <div className="flex items-center gap-5 text-white">
         {socials.map((social, index) => {
           const Icon = social.icon;
@@ -39,8 +64,9 @@ const Navbar = ({ className }: { className?: string }) => {
               key={index}
               aria-label={social.label}
               target="_blank"
+              className="p-2 rounded-lg border border-white/5 hover:border-green-500/30 hover:bg-green-500/5 transition-all"
             >
-              <Icon className="w-5 h-5 hover:scale-125 transition-all" />
+              <Icon className="w-4 h-4 md:w-5 md:h-5" />
             </Link>
           );
         })}

@@ -8,14 +8,18 @@ import Experience from "./components/Experience";
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-black">
-      <div className="dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative">
-        <div className="max-w-7xl mx-auto p-5 ">
+    <div className="min-h-screen bg-black text-white">
+      {/* Hero */}
+      <div className="dark:bg-grid-small-white/[0.07] bg-grid-small-black/[0.2] relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-green-500/[0.03] via-transparent to-transparent pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
           <Navbar />
           <HeroSection />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto p-5 mt-20">
+
+      {/* Main sections */}
+      <div className="max-w-6xl mx-auto px-5 md:px-8">
         <ProfessionalSummary />
         <Experience />
         <Skills />

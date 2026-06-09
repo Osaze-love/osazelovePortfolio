@@ -44,10 +44,10 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            <div className="rounded-md w-full p-4 overflow-hidden bg-black group-hover:ring-2 ring-green-500 relative z-20 transition-all duration-500 cursor-pointer">
-              <div className="py-10 z-50 relative space-y-5">
-                <Icon className="w-4 h-4 md:w-8 md:h-8 mx-auto" />
-                <p className="text-sm md:text-xl font-bold text-center text-gray-300">
+            <div className="rounded-xl w-full p-4 overflow-hidden bg-white/[0.03] border border-white/[0.06] group-hover:border-green-500/30 group-hover:shadow-lg group-hover:shadow-green-500/5 relative z-20 transition-all duration-300 cursor-pointer">
+              <div className="py-8 z-50 relative space-y-4">
+                <Icon className="w-6 h-6 md:w-8 md:h-8 mx-auto text-green-400 group-hover:scale-110 transition-transform" />
+                <p className="text-sm md:text-base font-semibold text-center text-gray-300 group-hover:text-white transition-colors">
                   {item.text}
                 </p>
               </div>

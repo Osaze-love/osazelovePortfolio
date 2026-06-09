@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Title from "./Title";
 import { cn } from "@/lib/utils";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
@@ -8,20 +7,30 @@ const mainProjects = [
   {
     title: "Sippy Website",
     link: "https://www.sippy.life/",
-    cover: "/sippyImage.png",
+    cover: "/newsippy.jpeg",
+    tags: ["Next.js", "Paystack", "CRUD", "Collaborative"],
     description:
-      "Built on Nextjs. Modern UI. Worked with an existing code base. Built collaboratively with three developers. CRUD functionalities. Paystack Integration.",
-    background: "bg-black-500",
+      "Modern UI built on Next.js with an existing codebase. Collaborative build with three developers — CRUD functionalities and Paystack integration.",
+    badge: null,
   },
   {
-    title: "Passpro Africa",
-    link: "https://passprowebsite.vercel.app/",
-    cover: "/passproImage.png",
+    title: "Miracle Portfolio",
+    link: "https://miracle-bello.vercel.app/",
+    cover: "/miraclebellz.png",
+    tags: ["Next.js", "Vibe Coded", "Animations"],
     description:
-      "Nextjs. Event Ticketing platform. Built solely.",
-    background: "bg-black-500",
+      "Social media manager portfolio — vibe coded with bold typography, smooth scroll animations, and a conversion-focused layout.",
+    badge: "✨ Vibe Coded",
   },
-  
+  {
+    title: "Nuyew Tech Academy",
+    link: "https://www.nuyew.academy/",
+    cover: "/nuyew.jpeg",
+    tags: ["WordPress", "Career Platform", "CMS"],
+    description:
+      "WordPress build for a UK-based tech career academy. Career pathways, funding options, and student support — all managed through WordPress.",
+    badge: null,
+  },
 ];
 
 const otherProjects = [
@@ -30,103 +39,119 @@ const otherProjects = [
     link: "https://saas-chat-sigma.vercel.app/",
     github: "https://github.com/Osaze-love/saas-chat",
     cover: "/SaasChat.png",
+    tags: ["Next.js 14", "Stripe", "Firebase", "Next-Auth"],
     description:
-      "A massive SAAS build. Chat app that translates to over 10 languages. Nextjs 14, Tailwind, Zod, Shadcn, Stripe, Next-Auth, Firebase. Pages protected and features limited by subscription plan. Stripe in test mode.",
-    background: "bg-black-500",
+      "Chat app translating 10+ languages. Subscription-gated features with Stripe, Firebase, and Next-Auth.",
   },
   {
     title: "Dropbox Clone",
     link: "https://dropbox-clone-ul32.vercel.app/",
     github: "https://github.com/Osaze-love/dropbox-clone",
     cover: "/Dropboxclone.png",
+    tags: ["Firebase", "Clerk", "Shadcn"],
     description:
-      "Interacts with Firebase. CRUD app for file storage. Clerk for authentication. Modern UI with shadcn.",
-    background: "bg-black-500",
+      "CRUD file storage app with Firebase backend, Clerk authentication, and a modern shadcn UI.",
   },
 ];
 
+const ProjectCard = ({
+  project,
+  showGithub = false,
+}: {
+  project: (typeof mainProjects)[0] | (typeof otherProjects)[0];
+  showGithub?: boolean;
+}) => (
+  <div className="glass-card p-5 md:p-6 group hover:border-green-500/20 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/5 h-full flex flex-col">
+    <div className="relative overflow-hidden rounded-xl mb-4">
+      <DirectionAwareHover
+        imageUrl={project.cover}
+        className="w-full aspect-video cursor-pointer"
+        imageClassName="object-cover"
+      >
+        <h3 className="text-lg font-bold">{project.title}</h3>
+      </DirectionAwareHover>
+    </div>
+
+    {"badge" in project && project.badge && (
+      <span className="inline-flex self-start text-xs font-medium px-2.5 py-1 rounded-full bg-violet-500/15 text-violet-300 border border-violet-500/25 mb-3">
+        {project.badge}
+      </span>
+    )}
+
+    <div className="flex flex-wrap gap-1.5 mb-3">
+      {project.tags.map((tag) => (
+        <span
+          key={tag}
+          className="text-xs px-2 py-0.5 rounded-md bg-white/5 text-gray-400 border border-white/5"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+
+    <p className="text-sm md:text-base text-gray-400 flex-1 leading-relaxed">
+      {project.description}
+    </p>
+
+    <div className={cn("flex items-center gap-3 mt-5", showGithub ? "justify-between" : "justify-center")}>
+      {showGithub && "github" in project && project.github && (
+        <MovingBorderBtn
+          borderRadius="0.5rem"
+          className="px-3 py-1.5 font-semibold text-sm"
+        >
+          <a href={project.github} target="_blank">
+            GitHub
+          </a>
+        </MovingBorderBtn>
+      )}
+      <MovingBorderBtn
+        borderRadius="0.5rem"
+        className="px-3 py-1.5 font-semibold text-sm"
+      >
+        <a href={project.link} target="_blank">
+          Live Site →
+        </a>
+      </MovingBorderBtn>
+    </div>
+  </div>
+);
+
 const Projects = () => {
   return (
-    <div className="py-10 text-white px-1 md:px-0 p-5 sm:p-0">
+    <div id="projects" className="py-10 text-white px-1 md:px-0 relative section-glow">
       <Title
-        text="Projects 🎨"
-        className="flex flex-col items-center justify-center "
+        number="03 — Projects"
+        text="Selected work"
+        subtitle="A curated showcase — some live projects are omitted for confidentiality."
+        className="flex flex-col items-center justify-center"
       />
-      <div className="max-w-full md:max-w-3xl mx-auto text-center text-gray-300 pt-6 pb-4 md:pb-10 text-sm md:text-md md:text-lg">
-        This is not an exhaustive list of projects. For confidentiality, some live projects are not included. See full descriptions in <span>
-        <MovingBorderBtn borderRadius="0.2rem" className="p-1 font-semibold">
-            <a href="/OsazeLoveglobalcv.pdf" target="_blank">
-             CV
-            </a>
-          </MovingBorderBtn>
-        </span>
-         
+
+      <div className="max-w-2xl mx-auto text-center text-gray-400 pt-6 pb-2 text-sm md:text-base leading-relaxed">
+        This is not an exhaustive list of projects. For confidentiality, some live
+        projects are not included. See full descriptions in{" "}
+        <MovingBorderBtn borderRadius="0.2rem" className="inline-flex p-1 font-semibold align-middle">
+          <a href="/OsazeLoveglobalcv.pdf" target="_blank">
+            CV
+          </a>
+        </MovingBorderBtn>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 pt-4 md:pt-10 gap-5">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 md:pt-12 max-w-6xl mx-auto">
         {mainProjects.map((project, index) => (
-          <div key={index}>
-            <div className={cn("p-5 rounded-md", project.background)}>
-              <DirectionAwareHover
-                imageUrl={project.cover}
-                className="w-full space-y-5 cursor-pointer"
-              >
-                <h1>{project.title}</h1>
-              </DirectionAwareHover>
-              <p className="my-3 text-sm md:text-lg">{project.description}</p>
-              {project.link && project.link !== "#" && (
-                <div className="flex justify-center items-center mt-2">
-                  <MovingBorderBtn
-                    borderRadius="0.5rem"
-                    className="px-2 md:px-3 py-1 md:py-2 font-semibold"
-                  >
-                    <a className="text-sm md:text-lg" href={project.link} target="_blank">
-                      Project Link
-                    </a>
-                  </MovingBorderBtn>
-                </div>
-              )}
-            </div>
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
-      <div className="pt-20 md:pt-40">
+
+      <div className="pt-24 md:pt-32 max-w-5xl mx-auto">
         <Title
+          number="03b — Side Projects"
           text="Other Projects"
-          className="flex flex-col items-center justify-center rotate-0"
+          subtitle="Personal builds and experiments."
+          className="flex flex-col items-center justify-center"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 pt-2 md:pt-10 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 md:pt-12">
           {otherProjects.map((project, index) => (
-            <div key={index}>
-              <div className={cn("p-5 rounded-md", project.background)}>
-                <DirectionAwareHover
-                  imageUrl={project.cover}
-                  className="w-full space-y-5 cursor-pointer"
-                >
-                  <h1>{project.title}</h1>
-                </DirectionAwareHover>
-                <p className="my-3 text-sm md:text-lg">{project.description}</p>
-                <div className="flex justify-evenly items-center">
-                  {project.github && (
-                    <MovingBorderBtn
-                      borderRadius="0.5rem"
-                      className="px-2 md:px-3 py-1 md:py-2 font-semibold"
-                    >
-                      <a className="text-sm md:text-lg" href={project.github} target="_blank">
-                        View Github
-                      </a>
-                    </MovingBorderBtn>
-                  )}
-                  <MovingBorderBtn
-                    borderRadius="0.5rem"
-                    className="px-2 md:px-3 py-1 md:py-2 font-semibold"
-                  >
-                    <a className="text-sm md:text-lg" href={project.link} target="_blank">
-                      Project Link
-                    </a>
-                  </MovingBorderBtn>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={index} project={project} showGithub />
           ))}
         </div>
       </div>
