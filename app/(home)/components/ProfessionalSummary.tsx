@@ -1,7 +1,7 @@
 import Title from "./Title";
 
 const highlights = [
-  "2+ years professional experience",
+  "3+ years professional experience",
   "Computer Science graduate",
   "Startup & collaborative environments",
   "Teaching & mentoring background",
@@ -9,7 +9,7 @@ const highlights = [
 
 const ProfessionalSummary = () => {
   return (
-    <div id="about" className="max-w-5xl text-white mx-auto px-1 md:px-8 pb-28 relative section-glow">
+    <div id="about" className="max-w-5xl text-white mx-auto px-1 mt-8 md:mt-16 md:px-8 pb-28 relative section-glow">
       <Title
         number="00 — About"
         text="Professional Summary"
