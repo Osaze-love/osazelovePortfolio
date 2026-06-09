@@ -9,11 +9,11 @@ const highlights = [
 
 const ProfessionalSummary = () => {
   return (
-    <div id="about" className="max-w-5xl text-white mx-auto px-1 mt-8 md:mt-16 md:px-8 pb-28 relative section-glow">
+    <div id="about" className="max-w-5xl text-white mx-auto px-1 md:px-8 pb-28 relative section-glow">
       <Title
         number="00 — About"
         text="Professional Summary"
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center mt-8 md:mt-16 justify-center"
       />
 
       <div className="pt-10 md:pt-14">
