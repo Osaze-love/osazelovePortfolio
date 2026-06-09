@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
 
       <p className="text-center text-xs text-gray-600 mt-8">
-        © {year} Osaze Love. Built with Next.js & Tailwind.
+        © {year} Osaze Love.
       </p>
     </footer>
   );
