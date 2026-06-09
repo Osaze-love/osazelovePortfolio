@@ -12,7 +12,7 @@ const Footer = () => {
             Osaze<span className="text-green-500">Love</span>
           </p>
           <p className="text-sm text-gray-500 mt-1">
-            Frontend engineer · Lagos, Nigeria · Remote worldwide
+            Full stack engineer · Lagos, Nigeria · Remote worldwide
           </p>
         </div>
 
