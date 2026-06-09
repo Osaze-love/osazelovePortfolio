@@ -1,7 +1,12 @@
 import Title from "./Title";
 import { cn } from "@/lib/utils";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import { MovingBorderBtn } from "@/components/ui/moving-border";
+
+const ghostBtn =
+  "inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-lg border border-white/10 text-gray-300 hover:border-white/25 hover:text-white transition-colors";
+
+const primaryBtn =
+  "inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-lg border border-green-500/40 bg-green-500/10 text-green-400 hover:bg-green-500/20 hover:text-green-300 transition-colors";
 
 const mainProjects = [
   {
@@ -95,23 +100,13 @@ const ProjectCard = ({
 
     <div className={cn("flex items-center gap-3 mt-5", showGithub ? "justify-between" : "justify-center")}>
       {showGithub && "github" in project && project.github && (
-        <MovingBorderBtn
-          borderRadius="0.5rem"
-          className="px-3 py-1.5 font-semibold text-sm"
-        >
-          <a href={project.github} target="_blank">
-            GitHub
-          </a>
-        </MovingBorderBtn>
-      )}
-      <MovingBorderBtn
-        borderRadius="0.5rem"
-        className="px-3 py-1.5 font-semibold text-sm"
-      >
-        <a href={project.link} target="_blank">
-          Live Site →
+        <a href={project.github} target="_blank" className={ghostBtn}>
+          GitHub
         </a>
-      </MovingBorderBtn>
+      )}
+      <a href={project.link} target="_blank" className={primaryBtn}>
+        Live Site →
+      </a>
     </div>
   </div>
 );
