@@ -126,16 +126,6 @@ const Projects = () => {
         className="flex flex-col items-center justify-center"
       />
 
-      <div className="max-w-2xl mx-auto text-center text-gray-400 pt-6 pb-2 text-sm md:text-base leading-relaxed">
-        This is not an exhaustive list of projects. For confidentiality, some live
-        projects are not included. See full descriptions in{" "}
-        <MovingBorderBtn borderRadius="0.2rem" className="inline-flex p-1 font-semibold align-middle">
-          <a href="/OsazeLoveglobalcv.pdf" target="_blank">
-            CV
-          </a>
-        </MovingBorderBtn>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 md:pt-12 max-w-6xl mx-auto">
         {mainProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
