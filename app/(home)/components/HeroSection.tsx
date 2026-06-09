@@ -30,7 +30,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="md:max-w-md text-sm md:text-lg text-gray-400 leading-relaxed">
-          Frontend engineer crafting modern, interactive web experiences —
+          Full stack engineer crafting modern, interactive web experiences —
           from MVP-ready products to polished dashboards and WordPress builds.
         </p>
 
