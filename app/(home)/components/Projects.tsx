@@ -19,6 +19,15 @@ const mainProjects = [
     badge: null,
   },
   {
+    title: "Molavikhaus",
+    link: "https://www.molavikhaus.com/",
+    cover: "/molavikhaus.jpeg",
+    tags: ["Next.js", "Vibe Coded", "Admin + Website", "Backend Integration", "Paystack"],
+    description:
+      "Hotel platform with both customer-facing website and admin dashboard. Vibe coded build with backend integration and Paystack payment flow.",
+    badge: "✨ Vibe Coded",
+  },
+  {
     title: "Miracle Portfolio",
     link: "https://miracle-bello.vercel.app/",
     cover: "/miraclebellz.png",
